@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test led matrix" board="Alchitry Au" language="Lucid" version="3">
+  <files>
+    <component>spi_controller.luc</component>
+    <component>counter.luc</component>
+    <src>max7219.luc</src>
+    <component>reset_conditioner.luc</component>
+    <src top="true">au_top.luc</src>
+    <src>matrix.luc</src>
+    <constraint>alchitry.acf</constraint>
+    <constraint lib="true">au.xdc</constraint>
+  </files>
+</project>

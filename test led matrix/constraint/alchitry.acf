@@ -1,0 +1,16 @@
+pin clk CLOCK;
+clock clk 10MHz;
+
+pin rst_n RESET;
+
+pin max7219_load A2;
+pin max7219_data A3;
+pin max7219_clock A8;
+
+pin spi_channel[0] B45;
+pin spi_channel[1] B46;
+pin spi_channel[2] B6;
+pin spi_channel[3] B5;
+
+pin avr_rx B48;
+pin spi_miso B49;
