@@ -1,0 +1,17 @@
+module rom_colours ( // contains the inputs thare are to be fed into the alu via the fsm
+    input selector[2],   
+    output out[24]        //output 38 bits (A+B+ALUFN)
+  ) {
+  
+  const INPUTS = {
+    hFF0000, // GREEN,
+    h00FF00, // BLUE
+    h0000FF, // RED
+    h000000, // WHITE
+    h000000, // OFF
+  };
+
+  always {
+    out = INPUTS[selector];
+  }
+}
