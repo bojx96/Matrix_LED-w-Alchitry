@@ -1,16 +1,14 @@
 module button_test (
     input clk,  // clock
     input button_input,       // declare input as PULLDOWN
-    output button_pressed    // output signal depending if button got clicked or not
+    output is_pressed    // output signal depending if button got clicked or not
   ) {
   button_conditioner button_cond(.clk(clk));
   edge_detector edge(#RISE(1), #FALL(0),.clk(clk)); // used to detect rising edge
   always {
     button_cond.in = button_input; // need to condition button input due to button pressing noise
     edge.in = button_cond.out; // button conditioner output goes into edge detector to detect rising edge
-    button_pressed = edge.out; // output edge conditioner to button_pressed output
-    
-    
+    is_pressed = edge.out; // output edge conditioner to button_pressed output
   /*
     if(edge.out){
       // if button pressed   
